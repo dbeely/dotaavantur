@@ -1,0 +1,353 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*вверхняя строка*/
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #111;
+}
+
+.header-left {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+nav a.btn-red {
+    background-color: #b71c1c;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 40px;
+    justify-items: center; /* Центрируем контент глобально */
+}
+
+/*осмотр героя*/
+.hero-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.hero-info {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    justify-items: start;
+}
+
+.hero-name {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}
+
+.hero-skills {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+.hero-skills img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #444;
+}
+
+.innate-ability {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+    align-items: center;
+    color: #00bfff;
+    font-size: 14px;
+    text-align: left;
+}
+
+.hero-model {
+    display: grid;
+    justify-items: end;
+    width: 100%;
+}
+.hero-model img {
+    max-width: 450px;
+}
+
+/*выбор*/
+.section-header {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.build-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 40px;
+}
+
+.tab {
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: transparent;
+}
+.tab.support {
+    background-color: #2e7d32;
+}
+.tab.mid {
+    background-color: #00acc1;
+    position: relative;
+}
+.tab.carry {
+    background-color: #b71c1c;
+}
+.tab.mid::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #00acc1;
+    margin: 5px auto -20px auto;
+}
+
+/*старт*/
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+}
+
+.grid-col {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+}
+
+.grid-col h3 {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0;
+}
+
+.items-matrix-3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+}
+.item-img {
+    width: 45px;
+    height: 35px;
+    object-fit: cover;
+    border: 1px solid #000;
+}
+
+.aspect-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 8px 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.aspect-btn img {
+    width: 25px;
+    filter: invert(1);
+}
+
+/*билд*/
+.build-title {
+    color: #00acc1;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.build-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    width: 100%;
+    align-items: start;
+}
+
+.build-left {
+    display: grid;
+    gap: 40px;
+}
+.build-section {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+}
+
+.items-main-row {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 5px;
+}
+.skill-sequence {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 2px;
+}
+.skill-sequence img {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #333;
+}
+
+/*дерево*/
+.talent-tree-wrapper {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.talent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 140px;
+}
+
+.talent-cell {
+    display: grid;
+    place-items: center;
+    height: 60px;
+    border-bottom: 2px solid #ff9800;
+}
+
+.talent-cell:nth-child(odd) {
+    border-right: 2px solid #ff9800;
+}
+
+.talent-cell:nth-last-child(1),
+.talent-cell:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.talent-circle {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ff9800;
+    border-radius: 50%;
+    background-color: #151515; /* фон чтобы перекрывал линии если что */
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*по ситуации*/
+.situational-items {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 10px;
+}
+
+.matchups {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 40px;
+}
+.matchup-col {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+.hero-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 5px;
+}
+.hero-icons-grid img {
+    width: 30px;
+}
+.winrate {
+    color: #76ff03;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*простенькие страницы*/
+.simple-content {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 60vh;
+    gap: 20px;
+}
+.simple-title {
+    font-size: 80px;
+    margin: 0;
+}
+.simple-text {
+    font-size: 24px;
+    color: #ccc;
+}
