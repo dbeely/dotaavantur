@@ -338,16 +338,27 @@ h2 {
 /*простенькие страницы*/
 .simple-content {
     display: grid;
-    place-items: center;
-    align-content: center;
-    height: 60vh;
+    min-height: 60vh;
+    justify-items: center;
+    align-content: start;
     gap: 20px;
+    padding-bottom: 50px;
 }
 .simple-title {
     font-size: 80px;
     margin: 0;
+    line-height: 1.2;
 }
 .simple-text {
-    font-size: 24px;
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+}
+.simple-subtext {
+    font-size: 18px;
     color: #ccc;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 800px;
+    width: 100%;
 }
